@@ -1,0 +1,1 @@
+# TemplateView Concept in Django

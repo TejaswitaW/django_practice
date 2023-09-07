@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song</title>
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h3>Song Filtered By User</h3>
+        <th>Song Name</th>
+        <th>Duration</th>
+        <th>Writer</th>
+        {% for dt3 in data3 %}
+        <tr>
+            <td>{{dt3.song_name}}</td>
+            <td>{{dt3.song_duration}}</td>
+            <td>{{dt3.written_by}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

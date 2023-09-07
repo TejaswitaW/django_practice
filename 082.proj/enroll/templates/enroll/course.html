@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load cache %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <h2>Course 1</h2>
+    <h2>Course 2</h2>
+    <h2>Course 3</h2>
+    {% cache 30 course %}
+    <h2>Course 4</h2>
+    <h2>Course 5</h2>
+    <h2>Course 6</h2>
+    <h2>Course 4</h2>
+    <h2>Course 5</h2>
+    <h2>Course 6</h2>
+    {% endcache course %}
+</body>
+</html>

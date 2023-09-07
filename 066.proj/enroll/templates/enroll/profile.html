@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        .success {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome {{name}}</h2>
+    {% for message in messages %}
+    <small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</small>
+    {% endfor %}<br><br>
+    <a href="{% url 'changepass' %}">Change Password</a>
+    <a href="{% url 'userlogout' %}">Logout</a>
+    <a href="{% url 'changepassone' %}">Change Password Without Old Password</a>
+</body>
+</html>

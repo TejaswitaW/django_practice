@@ -1,0 +1,2 @@
+# Multitable Inheritance Concept
+
